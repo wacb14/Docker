@@ -49,6 +49,11 @@ services:
       - ATL_PROXY_NAME=confluence.internal
       - ATL_PROXY_PORT=80
       - ATL_TOMCAT_SCHEME=http
+      - ATL_JDBC_URL=jdbc:sqlserver://172.30.0.6:1433;databaseName=confluenceBD
+      - ATL_JDBC_USER=sa
+      - ATL_JDBC_PASSWORD=Root_12345
+      - ATL_DB_TYPE=mssql
+      - ATL_DB_SCHEMA_NAME=dbo
       - ATL_LICENSE_KEY=AAABjg0ODAoPeNp1kV9vmzAUxd/9KZD60mmisgMNaSRLI4a1aQlkJV3zkBfHvQRUMJGN0+Xbz4FFbaft7f6Rzrnndy9WBpzQ7ByCHRJMvZupHzgsWjkjPCLoFY4/QemqlZSMMQ7wxPMIYq3suOhS3gB942JL/G9l2zW8qq9E2yDRyuLK7qsD0E4ZQEujRMk1RLwDetJ18cQlBCWVAKkh/rWv1PHD8sYl+GwSL6zsv1xyUAdQ84jOiH/reutg5o6vc+zOrkOG6kH5juuSLtgb+367nhST7D4STZbp40vkPcT4CY8f8vUyLH9U6X55aDhLE5GbmX4pn5+J/sp3AYQbuqFDInsgZyA7UEOq3Gy1UNW+O9HpJ/ZUu5Zciv9k6nVS02xBZcWTtmSpS4Zp3nF1ki54reFMxqZL5lEep25CAt/HeDxCtqOfJ5nacVlp3h+SthIQU9B3fwPvnf5or4576D/IssUifmTzMDljO798hCJ4j2gfUtQGbDjn8sTCGWB82Uyd+MBr0zui93Jg8hu7OcZgMCwCFFx5GWrbHuFhTbMQ1qgu6rgk4KYEAhRbUhfu/9mOi5SrRPOnDWXsbjjoDA==X02jb
     volumes:
       - /data/your-confluence-home:/var/atlassian/application-data/confluence
@@ -63,6 +68,12 @@ services:
       - SERVER_PROXY_NAME=bitbucket.internal
       - SERVER_PROXY_PORT=80
       - SERVER_SCHEME=http
+      - ATL_DB_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
+      - ATL_JDBC_URL=jdbc:sqlserver://172.30.0.6:1433;databaseName=bitbucketBD
+      - ATL_JDBC_USER=sa
+      - ATL_JDBC_PASSWORD=Root_12345
+      - ATL_LICENSE_KEY=AAABkg0ODAoPeNp1kV1v2jAUhu/9KyLtZtOUKgZSUiRLI07aQkkCC6nWiRvjHopp4iDbCWW/fiGBdZu2O58vP+d9z4dlBda4erGwY+HhqN8bua5Fg6XVc3oYvcLxEZQWpST42nGGjtfvY0RLaRg3MSuAHBhf48GXbWkKJvIrXhZIG6a3VzPBQWpYHvfQNtIkisKvdDKeoXml+JZpCJgBcuLYjmdjjM4j4dteqONvxRsbOxdoGDWYf1FTUDWoSUB86s/tqXsztb1v4cK+vVsk55WaLxkFaUARoypAece7b2okogd6G+ZPn9Pv4v7xWe9onV0/xc9ZiX8UmXoYbxd4k4x3kN4J6av5m1sPp9hfeLuMR4cVWRGUVmvNldibk10toNm1oUkm+X9EdXs1skQN3cjZg0bHbBKkYWzP8HAwcBzXQ01E/swk6oVJoVlLjEsJiCpoo7+t7UBxVaxBJZtMN0cl9iWdGqZOpmxYrn+5crl7DwXwLssXZl3xVzDWx5ObVmfnp9XICmuWVy0bvT87TT8Bls/JqTAsAhRZgOLRHDkrP3C0vmfk1OERADomuwIUc7aZ/Cc8/ZkqzVxAONpK48urzkU=X02jf
+
     volumes:
       - bitbucketVolume:/var/atlassian/application-data/bitbucket
     networks:
