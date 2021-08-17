@@ -29,13 +29,6 @@ services:
       - ATL_PROXY_NAME=jira.internal
       - ATL_PROXY_PORT=80
       - ATL_TOMCAT_SCHEME=http
-      - ATL_JDBC_URL=jdbc:sqlserver://172.30.0.6:1433;databaseName=jiraBD
-      - ATL_JDBC_USER=sa
-      - ATL_JDBC_PASSWORD=Root_12345
-      - ATL_DB_DRIVER=com.microsoft.sqlserver.jdbc.SQLServerDriver
-      - ATL_DB_TYPE=mssql
-      - ATL_DB_SCHEMA_NAME=dbo
-      - ATL_LICENSE_KEY=AAAB3Q0ODAoPeNp9kltv4jAQhd/zKyLty+5DkE2gXKRITRMXUoVASUp3q76YMBC3kKS2w6W/vrmAYAvlceSZOZ/PmV9BBqqZLVSMVNzq6p0uulEtO1DrqI6Vd9hNgAuWxAa+QaiF2rqOlQUHiKMkTYHXXBZCLIDMmCy6iBeQ8Wjs+ETxstUU+HD+JPINhoYVK4klDaVHV2BsaDjFjdsokSvKlrUwWSlvjNPa2dAo42FEBdhUglEwaaitYazsdYNdCuVCazgYkLHlmO7hiWxTxncncx0NowMEGeSylyh84Gvgjm3c3Zl9ze80Rtqkqf/TevdevUJMeTLLQlkrCk0kc7mhHGr5TrYGQ/IMrrXlONSCWAKvWpcVa5+KyBhYyLq3n3tiJDYvvYmzrc945r49xPPoZet+bs3oyWT9T30XPL6TIUdN8vGxmMvpXyth+mP71VD8bCpCztIyiiPKzxldSPKSo7lZOXJM4/AHV6/8+CzRvU5usevYPvE0F7caDYSanWrNd4vyFuNC22U1X1JeTM7pUoAy5AsaM0HLb3tJDIrFoay+n9M+h8Ox1/9zpoRJORP7fG04uvyQy6v+Xl79XcCrFf2f165K1nSZlYIV9NmVXDH9lOB07rizqr8AsyRKZzAsAhQ8HM9K6OsoJCZIhVpMojtGpPWBrwIUJl5NERmYxduMUt1wHB5lzLbMPSk=X02mm
     volumes:
       - jiraVolume:/var/atlassian/application-data/jira
     networks:
